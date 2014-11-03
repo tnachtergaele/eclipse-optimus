@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.atos.optimus</groupId>
 	<artifactId>net.atos.optimus.parent</artifactId>
-	<version>1.1.0-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Optimus Parent Project</name>
 
@@ -56,6 +56,18 @@
 		</repository>
 	</repositories>
 
+	<modules>
+		<module>net.atos.optimus.common.parent</module>
+		<module>net.atos.optimus.emf.metamodels.parent</module>
+		<module>net.atos.optimus.t2m.java.parent</module>
+		<module>net.atos.optimus.m2m.engine.parent</module>
+		<module>net.atos.optimus.m2m.javaxmi.parent</module>
+		<module>net.atos.optimus.m2t.selector.parent</module>
+		<module>net.atos.optimus.m2t.merger.java.parent</module>
+		<module>net.atos.optimus.m2t.java.parent</module>
+		<module>net.atos.optimus.m2m.engine.sdk.parent</module>
+	</modules>
+	
 	<build>
 		<plugins>
 			<plugin>
