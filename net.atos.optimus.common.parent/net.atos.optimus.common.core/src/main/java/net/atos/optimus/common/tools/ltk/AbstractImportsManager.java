@@ -123,7 +123,13 @@ public abstract class AbstractImportsManager {
 					TextEdit rewrite = domCompilationUnit.rewrite(document, null);
 					try {
 						rewrite.apply(document);
-						return document.get();
+						//Realigning the File Header at the top of the file. 
+						String documentHeader = document.get().substring(document.get().indexOf("/*"),document.get().indexOf("*/") + 2  );
+						document.replace(document.get().indexOf("/*"),documentHeader.length()   , "");
+						StringBuffer sb = new StringBuffer(document.get());
+						sb.insert(0, documentHeader);
+					
+						return sb.toString();
 					} catch (MalformedTreeException e) {
 						Activator.getDefault().logError("Import Creation encountered Exception", e);
 					} catch (BadLocationException e) {
