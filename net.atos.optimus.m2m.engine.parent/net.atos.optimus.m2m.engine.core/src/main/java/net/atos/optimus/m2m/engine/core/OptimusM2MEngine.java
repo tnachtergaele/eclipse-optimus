@@ -94,6 +94,11 @@ public class OptimusM2MEngine {
 	}
 
 	/**
+	 * boolean flag to check for duplicate log messages   	  
+	 */
+	public static boolean isLogged = false;
+	
+	/**
 	 * Set to true if transformations are filtered according to their
 	 * transformation set
 	 */
@@ -334,6 +339,7 @@ public class OptimusM2MEngine {
 			}
 		}
 		OptimusM2MEngineMessages.TE05.log(System.currentTimeMillis() - begin);
+		isLogged = false;
 	}
 
 	/**
